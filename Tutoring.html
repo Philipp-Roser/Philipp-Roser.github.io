@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="name">Philipp Roser</h1>
+            <p class="tagline">Physics | Programming | Teaching</p>
+        </div>
+    </header>
+
+
+<nav class="navbar">
+    <div class="container">
+        <ul class="nav-links">
+			<li><a href="index.html">Main</a></li>
+            <li><a href="About.html">About Me</a></li>
+            <li><a href="PhysicsProjects.html">Physics</a></li>
+            <li><a href="SoftwareProjects.html">Programming</a></li>
+			<li><a href="Tutoring.html">Tutoring</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<!-- --------------------------------------------------------------------------->
+    <main>
+        <section class="section about">
+            <div class="container">
+                <h3>Tutoring</h3>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I offer private tutoring in Physics and Mathematics at high school and college level (online or in person). I also assist in preparing for university interviews in physics, math and philosophy, especially to Oxford/Cambridge and other universities with similar, interview-based application procedures.</p>
+						
+						<p><b>Highschool</b>: AP Physics/Math, IB Physics/Math, ...</p>
+						<p><b>College/University</b>: Calculus-based/algebra-based introductory college physics, various upper-division university physics courses </p>
+						<p><b>College admissions and interview preparation</b>: e.g. Oxford University's PAT, MAT and PhilAT admissions test, Cambridge's physics/math ESATs, preparing for the interview process</p>
+					
+
+						<p>Rate: $150/h, payable via PayPal or Venmo.</p>
+						<p>Please use the form below to reach out to me. </p>
+
+					<form action="send_mail.php" method="POST" class="contact-form">
+						<label for="submissionName">Name:</label>
+						<input type="text" id="submissionName" name="submissionName" placeholder="Your Name" required>
+					
+						<label for="email">Email Address:</label>
+						<input type="email" id="email" name="email" placeholder="Your Email" required>
+					
+						<label for="message">Message:</label>
+						<textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+					
+						<label for=""> </label>
+						<button type="button" id="send-button" onclick = "sendMessage()">Send Message</button>
+					</form>
+	
+					<p><i> Please note: If you are currently or soon anticipate to be a student in a physics class at Western Washington University, Whatcom Community College or Bellingham Technical College, I may have to decline your request for tutoring due to potential conflicts of interest.</i><p>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
+
+		
+		
+		
+    </main>
+
+
+<!-- --------------------------------------------------------------------------->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Philipp Roser. All Rights Reserved.</p>
+        </div>
+    </footer>
+	
+<script> // Put this here, so nothing in this script runs before the page is loaded. Probably makes no difference in this page, but in general best practice.
+	function sendMessage()
+	{			
+		const nameField = document.getElementById("submissionName");
+		const nameValue = nameField.value;
+
+		window.alert("Hello " + nameValue + "!");
+		
+		
+	}
+</script>	
+	
+</body>
+</html>
+
+
