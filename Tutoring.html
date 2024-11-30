@@ -41,7 +41,7 @@
 						<p><b>College/University</b>: Calculus-based/algebra-based introductory college physics, various upper-division university physics courses </p>
 						<p><b>College admissions and interview preparation</b>: e.g. Oxford University's PAT, MAT and PhilAT admissions test, Cambridge's physics/math ESATs, preparing for the interview process</p>
 					
-						<p>Please contact me at: &nbsp &nbsp &nbsp &nbsp <b>PhilippPhysicsTutor@gmail.com</b> </p>
+						<p>Please contact me at: &nbsp &nbsp &nbsp &nbsp <b>PhilippPhysicsTutor@gmail.com</b>  &nbsp &nbsp &nbsp &nbsp  <div class="copy-container">  <button onclick="copyEmail()">Copy Email Address</button>  </div> </p>
 
 						<p>Rate: $150/h, payable via PayPal or Venmo.</p>
 		    
@@ -67,15 +67,27 @@
     </footer>
 	
 <script> // Put this here, so nothing in this script runs before the page is loaded. Probably makes no difference in this page, but in general best practice.
-	function sendMessage()
-	{			
-		const nameField = document.getElementById("submissionName");
-		const nameValue = nameField.value;
 
-		window.alert("Hello " + nameValue + "!");
-		
-		
-	}
+
+
+        function copyEmail() {
+            // Get the email text
+            const email = "PhilippPhysicsTutor@gmail.com";
+
+            // Copy the email to the clipboard
+            navigator.clipboard.writeText(email).then(() => {
+                // Show a success message
+                const message = "Email copied.";
+                message.style.display = "block";
+
+                // Hide the message after 2 seconds
+                setTimeout(() => {
+                    message.style.display = "none";
+                }, 2000);
+            }).catch(err => {
+                console.error("Failed to copy email: ", err);
+            });
+        }
 </script>	
 	
 </body>
